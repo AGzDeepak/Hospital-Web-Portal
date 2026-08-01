@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Portal | VisionX Hospital</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div><strong>VisionX Hospital</strong><br/>Patient Portal</div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="doctor.html">Doctors</a>
+          <a href="admin.html">Admin</a>
+          <a href="emergency.html">Emergency</a>
+        </nav>
+      </div>
+      <div class="container hero">
+        <div>
+          <h1>Easy access to care, records, and appointments.</h1>
+          <p>Patients can review their schedule, treatment updates, and care support in one simple portal.</p>
+        </div>
+        <div class="hero-card">
+          <h3>Quick patient services</h3>
+          <ul class="portal-list">
+            <li>Appointment booking</li>
+            <li>Prescription follow-up</li>
+            <li>Care team communication</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="section">
+        <div class="section-title">
+          <div>
+            <h2>Patient registration</h2>
+            <p class="muted">Register new patients and manage records in a clean, easy workflow.</p>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Add a patient</h3>
+            <form id="patientForm">
+              <input id="pName" placeholder="Patient name" required />
+              <input id="pAge" type="number" placeholder="Age" />
+              <input id="pBlood" placeholder="Blood group" />
+              <input id="pDisease" placeholder="Disease" required />
+              <select id="pStatus">
+                <option value="Pending">Pending</option>
+                <option value="Admitted">Admitted</option>
+                <option value="Discharged">Discharged</option>
+              </select>
+              <button class="btn btn-primary" type="submit">Save Patient</button>
+            </form>
+          </div>
+          <div class="card">
+            <h3>Recent patient records</h3>
+            <ul id="patientList" class="clean"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <strong>VisionX Hospital</strong>
+        <p>Patient-first digital care experience.</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
